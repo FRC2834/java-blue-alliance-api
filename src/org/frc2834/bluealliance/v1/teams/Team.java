@@ -1,6 +1,6 @@
-package org.frc2834.bluealliance.teams;
+package org.frc2834.bluealliance.v1.teams;
 
-import org.frc2834.bluealliance.BlueAllianceObject;
+import org.frc2834.bluealliance.v1.BlueAllianceObject;
 
 /**
  * This class will be deserialized to contain basic team data

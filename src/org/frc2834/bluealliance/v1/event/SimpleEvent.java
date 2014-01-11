@@ -1,6 +1,6 @@
-package org.frc2834.bluealliance.event;
+package org.frc2834.bluealliance.v1.event;
 
-import org.frc2834.bluealliance.BlueAllianceObject;
+import org.frc2834.bluealliance.v1.BlueAllianceObject;
 
 /**
  * Simple Event class that will contain Simple Event data, without matches and team list

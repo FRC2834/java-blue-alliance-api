@@ -1,4 +1,4 @@
-package org.frc2834.bluealliance.event;
+package org.frc2834.bluealliance.v1.event;
 
 /**
  * This is a more detailed event object that extends off of the SimpleEvent object, providing more detailed info like matches and team lists

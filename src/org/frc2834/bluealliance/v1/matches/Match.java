@@ -1,6 +1,6 @@
-package org.frc2834.bluealliance.matches;
+package org.frc2834.bluealliance.v1.matches;
 
-import org.frc2834.bluealliance.BlueAllianceObject;
+import org.frc2834.bluealliance.v1.BlueAllianceObject;
 
 import java.util.HashMap;
 

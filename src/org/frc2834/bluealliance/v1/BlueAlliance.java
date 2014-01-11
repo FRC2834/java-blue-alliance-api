@@ -1,12 +1,12 @@
-package org.frc2834.bluealliance;
+package org.frc2834.bluealliance.v1;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import org.frc2834.bluealliance.event.Event;
-import org.frc2834.bluealliance.event.SimpleEvent;
-import org.frc2834.bluealliance.matches.Match;
-import org.frc2834.bluealliance.teams.Team;
-import org.frc2834.bluealliance.util.Constants;
+import org.frc2834.bluealliance.v1.event.Event;
+import org.frc2834.bluealliance.v1.event.SimpleEvent;
+import org.frc2834.bluealliance.v1.matches.Match;
+import org.frc2834.bluealliance.v1.teams.Team;
+import org.frc2834.bluealliance.v1.util.Constants;
 
 import java.io.IOException;
 import java.io.InputStreamReader;

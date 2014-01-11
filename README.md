@@ -10,6 +10,9 @@ This branch is **v1** of the BlueAlliance API
 
 #Changelog
 
+* Version 1.0.1
+    * Renamed package to org.frc2834.bluealliance.v1 for better convention and so v1 and v2 of the API can be used at once
+
 * Version 1.0.0
     * Initial Release
 

@@ -1,4 +1,4 @@
-package org.frc2834.bluealliance.util;
+package org.frc2834.bluealliance.v1.util;
 
 /**
  * All knowing Constants file
