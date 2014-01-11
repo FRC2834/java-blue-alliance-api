@@ -12,6 +12,9 @@ This branch is **v2** of the BlueAlliance API
 
 #Changelog
 
+* Version 2.0.1
+    * Renamed package to org.frc2834.bluealliance.v2 for better convention and so v1 and v2 of the API can be used at once
+
 * Version 2.0.0
     * Initial Release
 

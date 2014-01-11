@@ -1,8 +1,8 @@
-package org.frc2834.bluealliance;
+package org.frc2834.bluealliance.v2;
 
 import com.google.gson.Gson;
-import org.frc2834.bluealliance.teams.Team;
-import org.frc2834.bluealliance.util.Constants;
+import org.frc2834.bluealliance.v2.teams.Team;
+import org.frc2834.bluealliance.v2.util.Constants;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -21,7 +21,7 @@ public class BlueAlliance {
      * Queries basic information about a single team
      *
      * @param teamKey The team key you want to query data on, ex. "frc2834"
-     * @param year The year of the information of this team to query
+     * @param year    The year of the information of this team to query
      * @return Returns a Team object that contains information about the team
      * @throws IOException Throws IOException on connection/reader errors
      */
