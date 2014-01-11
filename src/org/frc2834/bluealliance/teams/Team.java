@@ -1,6 +1,7 @@
 package org.frc2834.bluealliance.teams;
 
 import org.frc2834.bluealliance.BlueAllianceObject;
+import org.frc2834.bluealliance.event.Event;
 
 /**
  * This class will be deserialized to contain basic team data
@@ -19,7 +20,7 @@ public class Team extends BlueAllianceObject {
     private String location;
     private String country_name;
     private String nickname;
-    private String[] events;
+    private Event[] events;
     private String website;
 
     /**
@@ -95,11 +96,11 @@ public class Team extends BlueAllianceObject {
     }
 
     /**
-     * Gets event codes for the events a team is participating in the current season, or last season if the newest season has not started yet. Ex. "2014misou"
+     * Gets a list of Event objects a team is participating in or has participated in
      *
-     * @return A String array of the team's event codes in which they are participating
+     * @return An Event array of the team's events in which they are participating or has participated
      */
-    public String[] getEvents() {
+    public Event[] getEvents() {
         return events;
     }
 
