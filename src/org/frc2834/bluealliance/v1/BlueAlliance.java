@@ -13,6 +13,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.lang.reflect.Type;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.Arrays;
 import java.util.List;
 
@@ -139,7 +140,9 @@ public class BlueAlliance {
      * @throws IOException throws IOException on connection/reader errors
      */
     private Reader createReader(String url) throws IOException {
-        return new InputStreamReader(new URL(url).openConnection().getInputStream());
+        URLConnection urlConnection = new URL(url).openConnection();
+        urlConnection.addRequestProperty("X-TBA-App-Id", "frc2834:java-blue-alliance-api:v1.0.2");
+        return new InputStreamReader(urlConnection.getInputStream());
     }
 
     /**
