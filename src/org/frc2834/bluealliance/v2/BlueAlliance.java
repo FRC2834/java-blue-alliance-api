@@ -93,7 +93,7 @@ public class BlueAlliance {
     public List<Event> getEventList(String year) throws IOException {
 
         @SuppressWarnings("unchecked")
-        List<Event> list = (List<Event>) (List<?>) deserializeJSONArray(new TypeToken<List<Team>>() {
+        List<Event> list = (List<Event>) (List<?>) deserializeJSONArray(new TypeToken<List<Event>>() {
                 }.getType(),
                 createReader(createURL(Constants.BLUE_ALLIANCE_EVENTS  + year)));
         return list;
