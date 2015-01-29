@@ -1,6 +1,8 @@
 package org.frc2834.bluealliance.v2;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import org.frc2834.bluealliance.v2.event.Event;
 import org.frc2834.bluealliance.v2.teams.Team;
 import org.frc2834.bluealliance.v2.util.Constants;
 
@@ -79,6 +81,22 @@ public class BlueAlliance {
      */
     private String createURL(String append) {
         return Constants.BLUE_ALLIANCE_BASE_URL_V2 + append;
+    }
+
+    /**
+     * Queries a list of all the events for a given year, with basic information for each event
+     *
+     * @param year The year to query a list of events from, ex. "2014"
+     * @return Returns a List of SimpleEvent objects, each containing basic information about the events
+     * @throws IOException Throws IOException on connection/reader errors
+     */
+    public List<Event> getEventList(String year) throws IOException {
+
+        @SuppressWarnings("unchecked")
+        List<Event> list = (List<Event>) (List<?>) deserializeJSONArray(new TypeToken<List<Team>>() {
+                }.getType(),
+                createReader(createURL(Constants.BLUE_ALLIANCE_EVENTS  + year)));
+        return list;
     }
 
 }

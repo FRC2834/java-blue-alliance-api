@@ -14,5 +14,12 @@ public interface Constants {
      * Extension for single team info with forward slash on the end
      */
     public static final String BLUE_ALLIANCE_TEAM_DETAILS = "team/";
+    /**
+     * Extension for all events with forward slash on the end
+     */
+    public static final String BLUE_ALLIANCE_EVENTS = "events/";
+    /**
+     * Extension for all
+     */
 
 }

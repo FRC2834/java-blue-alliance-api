@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="java-blue-alliance-api:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/java_blue_alliance_api_jar</output-path>
+    <root id="archive" name="java-blue-alliance-api.jar">
+      <element id="module-output" name="java-blue-alliance-api" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../google-gson-2.2.4/gson-2.2.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
