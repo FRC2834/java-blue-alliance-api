@@ -14,11 +14,10 @@ public class Match extends BlueAllianceObject {
     }
 
     private int match_number;
-    private String[] team_keys;
     private int set_number;
-    private String competition_level;
+    private String comp_level;
     private String key;
-    private String event;
+    private String event_key;
     private HashMap<String, Alliance> alliances;
 
     /**
@@ -28,15 +27,6 @@ public class Match extends BlueAllianceObject {
      */
     public int getMatchNumber() {
         return match_number;
-    }
-
-    /**
-     * Gets a list of all teams involved in this match, represented as BlueAlliance keys, ex. frc2834
-     *
-     * @return A String Array of team keys
-     */
-    public String[] getTeamKeys() {
-        return team_keys;
     }
 
     /**
@@ -54,7 +44,7 @@ public class Match extends BlueAllianceObject {
      * @return Returns the competition level
      */
     public String getCompetitionLevel() {
-        return competition_level;
+        return comp_level;
     }
 
     /**
@@ -72,7 +62,7 @@ public class Match extends BlueAllianceObject {
      * @return The event code this match took place in
      */
     public String getEvent() {
-        return event;
+        return event_key;
     }
 
     /**

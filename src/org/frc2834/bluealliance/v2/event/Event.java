@@ -17,31 +17,9 @@ public class Event extends BlueAllianceObject {
     private boolean official;
     private String start_date;
     private String end_date;
-    private String[] matches;
-    private String[] teams;
     private String event_code;
     private String location;
     private String facebook_eid;
-
-
-    /**
-     * This will return an array of the matches for this event (if generated), but will return the BlueAlliance key representation </br>
-     * Example, 2012ct_qm73 2012ct is the BlueAlliance representation of the match, qm is qualification match, and 73 is the match number
-     *
-     * @return String array of match keys
-     */
-    public String[] getMatches() {
-        return matches;
-    }
-
-    /**
-     * This will return an array of teams attending the event, but as BlueAlliance key representations, ex. "frc2834"
-     *
-     * @return String array of team keys
-     */
-    public String[] getTeams() {
-        return teams;
-    }
 
     /**
      * Gets the official FIRST event code for this event

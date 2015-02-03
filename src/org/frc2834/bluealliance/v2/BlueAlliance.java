@@ -56,7 +56,8 @@ public class BlueAlliance {
      * @throws IOException Throws IOException on connection/reader errors
      */
     public Event getEventDetails(String eventKey) throws IOException {
-        return (Event) deserializeJSON(new Event(), createReader(createURL(Constants.BLUE_ALLIANCE_EVENT_DETAILS + eventKey)));
+        Event event =  (Event) deserializeJSON(new Event(), createReader(createURL(Constants.BLUE_ALLIANCE_EVENT_DETAILS + eventKey)));
+        return event;
     }
 
     /**
@@ -88,6 +89,54 @@ public class BlueAlliance {
         List<Event> list = (List<Event>) (List<?>) deserializeJSONArray(new TypeToken<List<Event>>() {
                 }.getType(),
                 createReader(createURL(Constants.BLUE_ALLIANCE_EVENTS  + year)));
+        return list;
+    }
+
+    /**
+     * Queries a list of all the events for a given year, with basic information for each event
+     *
+     * @param teamKey 
+     * @return Returns a List of SimpleEvent objects, each containing basic information about the events
+     * @throws IOException Throws IOException on connection/reader errors
+     */
+    public List<Event> getTeamEventList(String teamKey) throws IOException {
+
+        @SuppressWarnings("unchecked")
+        List<Event> list = (List<Event>) (List<?>) deserializeJSONArray(new TypeToken<List<Event>>() {
+                }.getType(),
+                createReader(createURL(Constants.BLUE_ALLIANCE_TEAM_DETAILS + teamKey + "/events")));
+        return list;
+    }
+
+    /**
+     * Queries a list of all the events for a given year, with basic information for each event
+     *
+     * @param eventKey The event key to get matches for
+     * @return Returns a List of SimpleEvent objects, each containing basic information about the events
+     * @throws IOException Throws IOException on connection/reader errors
+     */
+    public List<Match> getEventMatchList(String eventKey) throws IOException {
+
+        @SuppressWarnings("unchecked")
+        List<Match> list = (List<Match>) (List<?>) deserializeJSONArray(new TypeToken<List<Match>>() {
+                }.getType(),
+                createReader(createURL(Constants.BLUE_ALLIANCE_EVENT_DETAILS + eventKey + "/matches")));
+        return list;
+    }
+
+    /**
+     * Queries a list of all the events for a given year, with basic information for each event
+     *
+     * @param eventKey The event key to get matches for
+     * @return Returns a List of SimpleEvent objects, each containing basic information about the events
+     * @throws IOException Throws IOException on connection/reader errors
+     */
+    public List<Team> getEventTeamList(String eventKey) throws IOException {
+
+        @SuppressWarnings("unchecked")
+        List<Team> list = (List<Team>) (List<?>) deserializeJSONArray(new TypeToken<List<Team>>() {
+                }.getType(),
+                createReader(createURL(Constants.BLUE_ALLIANCE_EVENT_DETAILS  + eventKey + "/teams")));
         return list;
     }
 
