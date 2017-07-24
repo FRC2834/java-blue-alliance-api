@@ -17,6 +17,12 @@ import java.util.List;
  */
 public class BlueAlliance {
 
+    private String key;
+
+    public BlueAlliance(String key) {
+        this.key = key;
+    }
+    
     /**
      * Queries basic information about a single team
      *
@@ -67,7 +73,10 @@ public class BlueAlliance {
      */
     private Reader createReader(String url) throws IOException {
         URLConnection urlConnection = new URL(url).openConnection();
+        urlConnection.setDoOutput(true);
         urlConnection.addRequestProperty("X-TBA-App-Id", "frc2834:java-blue-alliance-api:v2.0.0");
+        urlConnection.addRequestProperty("X-TBA-Auth-Key", key);
+        urlConnection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11");
         return new InputStreamReader(urlConnection.getInputStream());
     }
 
