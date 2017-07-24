@@ -1,4 +1,4 @@
-package org.frc2834.bluealliance.v2.matches;
+package org.frc2834.bluealliance.v3.matches;
 
 /**
  * This Alliance object represents an Alliance with their score and the teams on the alliance

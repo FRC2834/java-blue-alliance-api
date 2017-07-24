@@ -1,7 +1,9 @@
-package org.frc2834.bluealliance.v2.teams;
+package org.frc2834.bluealliance.v3.teams;
 
-import org.frc2834.bluealliance.v2.BlueAllianceObject;
-import org.frc2834.bluealliance.v2.event.Event;
+import org.frc2834.bluealliance.v3.BlueAllianceObject;
+import org.frc2834.bluealliance.v3.event.Event;
+
+import java.util.Map;
 
 /**
  * This class will be deserialized to contain basic team data
@@ -14,13 +16,14 @@ public class Team extends BlueAllianceObject {
 
     private String name;
     private String key;
-    private String locality;
+    private String city;
     private String region;
     private int team_number;
-    private String location;
-    private String country_name;
+    private String location_name;
+    private String state_prov;
+    private String country;
     private String nickname;
-    private Event[] events;
+    private Map<String, String> home_championship;
     private String website;
 
     /**
@@ -42,12 +45,12 @@ public class Team extends BlueAllianceObject {
     }
 
     /**
-     * Get the team's locality
+     * Get the team's city
      *
-     * @return Team's locality, ex. 'Greenville'
+     * @return Team's city, ex. 'Greenville'
      */
-    public String getLocality() {
-        return locality;
+    public String getCity() {
+        return city;
     }
 
     /**
@@ -73,8 +76,8 @@ public class Team extends BlueAllianceObject {
      *
      * @return The team's full location, ex "Greenville, SC, USA"
      */
-    public String getLocation() {
-        return location;
+    public String getLocationName() {
+        return location_name;
     }
 
     /**
@@ -82,8 +85,8 @@ public class Team extends BlueAllianceObject {
      *
      * @return The team's country name
      */
-    public String getCountryName() {
-        return country_name;
+    public String getCountry() {
+        return country;
     }
 
     /**
@@ -96,12 +99,23 @@ public class Team extends BlueAllianceObject {
     }
 
     /**
-     * Gets a list of Event objects a team is participating in or has participated in
+     * Gets a map of the team's home championships' locations
      *
-     * @return An Event array of the team's events in which they are participating or has participated
+     * @return A map of the championships' city names, with 4 digit String years as keys
      */
-    public Event[] getEvents() {
-        return events;
+    public Map<String, String> getHomeChampionshipMap() {
+        return home_championship;
+    }
+
+    /**
+     * Gets a map of the team's home championship's locations
+     *
+     * @param year A String of a four digit number representing the year of the championship
+     *
+     * @return The city name of the championship
+     */
+    public String getHomeChampionshipFromYear(String year) {
+        return home_championship.get(year);
     }
 
     /**
