@@ -3,20 +3,17 @@ java-blue-alliance-api
 
 A Java API to access FIRST FRC information from the thebluealliance.com API. Written simply and fully documented.
 
-**NOTE THAT THIS BRANCH OF THE V2 API IS INCOMPLETE AS WE ARE WAITING FOR THE BLUE ALLIANCE TO FINALIZE THEIR V2 API**
+**Note that this v3 wrapper is still under development, but will soon replace the v2 wrapper. This is because the Blue Alliance will shutdown v2 on January 1st, 2018.**
 
 #Version Information
 For simplicity, the API major version (ex. the first number of the version) will always correspond with the API version from the Blue Alliance.
 The branches will also represent the *Blue Alliance* API version, so branch v1 represents version one of the Blue Alliance API
-This branch is **v2** of the BlueAlliance API
+This branch is **v3** of the BlueAlliance API
 
 #Changelog
 
-* Version 2.0.1
-    * Renamed package to org.frc2834.bluealliance.v2 for better convention and so v1 and v2 of the API can be used at once
-
-* Version 2.0.0
-    * Initial Release
+* Version 3.0.0 pre
+    * Pre-Release
 
 #Credits
 
@@ -24,4 +21,4 @@ This branch is **v2** of the BlueAlliance API
 
 #Dependencies
 
-* GSON from Google, v 2.2.4 was used for this project, but any new version should work. https://code.google.com/p/google-gson/
+* GSON from Google, v 2.8.1 was used for this project, but any new version should work. https://code.google.com/p/google-gson/
