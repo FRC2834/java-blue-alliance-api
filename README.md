@@ -3,7 +3,7 @@ java-blue-alliance-api
 
 A Java API to access FIRST FRC information from the thebluealliance.com API. Written simply and fully documented.
 
-**Note that this v3 wrapper is still under development, but will soon replace the v2 wrapper. This is because the Blue Alliance will shutdown v2 on January 1st, 2018.**
+**Note that this v3 wrapper is still under development, but will soon replace the v2 wrapper. This is because The Blue Alliance will shutdown v2 on January 1st, 2018.**
 
 #Version Information
 For simplicity, the API major version (ex. the first number of the version) will always correspond with the API version from the Blue Alliance.
